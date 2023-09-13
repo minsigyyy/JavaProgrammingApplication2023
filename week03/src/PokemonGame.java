@@ -9,7 +9,7 @@ public class PokemonGame {
         Pikachu p1 = new Pikachu();
         Pokemon c1 = new Charizard();  // upcast
 
-        // anonymous object as parameter
+        // anonymous object as gitparameter
         s1.setFlyable(new NoFly());
         p1.setFlyable(new NoFly());
         c1.setFlyable(new Wings(){
