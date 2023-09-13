@@ -1,6 +1,5 @@
-package version03;
 
-class Pokemon {
+public class Pokemon {
     // fields, 멤버 변수, 속성
     // 캡슐화
     private String name;
@@ -10,12 +9,23 @@ class Pokemon {
     // constructor, 생성자(특수 형태의 메서드)
     // 리턴타입이 없으며 클래스의 이름과 같다
     Pokemon(){
-        System.out.println("포켓몬 객체 생성!");
+        System.out.println("포켓몬 객체 생성(기본 생성자)!");
+    }
+
+    // constructor overloading
+    // 생성자 오버로딩
+    Pokemon(String name){
+        System.out.println("포켓몬 객체 생성(매개변수 1개 생성자)!");
+        this.name = name;
+    }
+    Pokemon(String name, int level, int hp) {
+        System.out.println("포켓몬 객체 생성(매개변수 3개 생성자)!");
+        this.name = name;
+        this.level = level;
+        this.hp = hp;
     }
 
     // alt+insert
-
-
     public String getName() {
         return name;
     }
@@ -50,29 +60,5 @@ class Pokemon {
     void evolve(Pokemon pokemon){
         pokemon.level = pokemon.level + 1;
         System.out.println(pokemon.name + "의 레벨이 " + pokemon.level + "으로 증가!");
-    }
-}
-
-
-public class PokemonGame {
-    public static void main(String[] args) {
-        Pokemon pikachu = new Pokemon();
-        Pokemon charizard = new Pokemon();
-
-//        pikachu.name = "피카츄";
-//        charizard.name = "리자몽";
-        pikachu.setName("피카츄");
-        charizard.setName("리자몽");
-
-        pikachu.setLevel(3);
-        pikachu.setHp(100);
-
-        charizard.setLevel(36);
-        charizard.setHp(800);
-
-        System.out.println(charizard.getName() + "의 체력은 " + charizard.getHp() + "이고 레벨은 " + charizard.getLevel() + "입니다");
-        charizard.evolve(charizard);
-        pikachu.evolve(pikachu);
-        pikachu.evolve(pikachu);
     }
 }
