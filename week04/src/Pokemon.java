@@ -4,6 +4,7 @@ public abstract class Pokemon {
     protected int level;
     private int hp;
     protected String name;
+
     private static int pokemonCount = 0;  // 클래스(정적) 변수
     Flyable flyable;  // 연관 관계
     public void setFlyable(Flyable flyable) {  // upcast
@@ -44,6 +45,11 @@ public abstract class Pokemon {
         this.hp = hp;
     }
     public abstract void attack();
+    public void attack(Pokemon targetPokemon){
+        System.out.println(this.name +"이(가) " + targetPokemon.name + "에게 공격 시전!");
+        //targetPokemon.hp = this.
+    }
+
     public void evolve(){  // 매개변수 제거
         if(this instanceof Pikachu){
             System.out.println("삐까삐까~");
