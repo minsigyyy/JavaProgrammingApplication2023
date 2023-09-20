@@ -1,11 +1,11 @@
 public class Pikachu extends Pokemon{
-    public Pikachu(Flyable f) {
+    public Pikachu() {
         System.out.println("자식 클래스(피카츄)의 기본 생성자");
         this.level = 1;
         this.setHp(35);
         this.name = "피카츄";
-        //this.flyable = new NoFly(); // Association, Has-a (Composition)
-        this.flyable = f;
+        this.flyable = new NoFly(); // Association, Has-a (Composition) / NoFly 객체 셍성
+
     }
 
     @Override
