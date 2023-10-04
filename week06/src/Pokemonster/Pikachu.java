@@ -1,4 +1,6 @@
-public class Pikachu extends Pokemon{
+package Pokemonster;
+
+public class Pikachu extends Pokemon {
     public Pikachu(Flyable f) {
         System.out.println("피카피카!");
         this.level = 1;
@@ -11,7 +13,7 @@ public class Pikachu extends Pokemon{
         //this.flyable = new NoFly();  // Association, Has-a (Composition)
         this.flyable = f;
         this.skills = new String[]{"10만볼트", "스파크", "볼부비부비"};
-        this.specialAttackRate = new int[]{40, 50, 20};
+        this.specialAttackRate = new int[]{90, 65, 20};
     }
     @Override
     public void attack() {
