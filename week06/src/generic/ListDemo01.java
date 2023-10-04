@@ -1,10 +1,10 @@
 package generic;
 
+
 import Pokemonster.*;
 
 import java.util.ArrayList;
-import java.util.List;
-
+import java.util.List;  // built in
 
 public class ListDemo01 {
     public static void main(String[] args) {
@@ -15,6 +15,5 @@ public class ListDemo01 {
 
         for(Pokemon p : pokemons)
             p.attack();
-
     }
 }

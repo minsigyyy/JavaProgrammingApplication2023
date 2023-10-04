@@ -1,7 +1,10 @@
 package generic;
+
 import Pokemonster.Pokemon;
+
 import java.util.ArrayList;
 import java.util.List;
+
 public class ListDemo02 {
     public static void main(String[] args) {
         List<String> skills = new ArrayList<>();
