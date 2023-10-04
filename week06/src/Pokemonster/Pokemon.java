@@ -1,5 +1,7 @@
 package Pokemonster;
 
+import java.util.List;
+
 //public final class Pokemon {
 public abstract class Pokemon {
     //private int level;
@@ -8,8 +10,10 @@ public abstract class Pokemon {
     protected String name;
     protected int attackRate;
     protected int defenceRate;
-    protected String[] skills; // 3가지 skill 추가 예정
-    protected int[] specialAttackRate;
+   // protected String[] skills; // 3가지 skill 추가 예정
+   // protected int[] specialAttackRate;
+    protected List<String> skill;
+    protected List<Integer> specialAttackRate;
     private static int pokemonCount = 0;  // 클래스(정적) 변수
 
     Flyable flyable;  // 연관 관계

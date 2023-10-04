@@ -1,8 +1,7 @@
 package generic;
-
+import Pokemonster.Pokemon;
 import java.util.ArrayList;
 import java.util.List;
-
 public class ListDemo02 {
     public static void main(String[] args) {
         List<String> skills = new ArrayList<>();
@@ -13,7 +12,9 @@ public class ListDemo02 {
         specialAttackRate.add(90);
         specialAttackRate.add(60);
         specialAttackRate.add(40);
-        for (String skill : skills)
+        System.out.println(skills.get(1) + " / " + specialAttackRate.get(1));
+
+        for(String skill : skills)
             System.out.println(skill);
         for (Integer rate : specialAttackRate)
             System.out.println(rate);
