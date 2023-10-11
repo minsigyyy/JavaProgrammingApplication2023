@@ -1,6 +1,7 @@
 package Pokemonster;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Pikachu extends Pokemon{
     public Pikachu(Flyable f) {
@@ -24,6 +25,18 @@ public class Pikachu extends Pokemon{
         this.specialAttackRate.add(90);
         this.specialAttackRate.add(65);
         this.specialAttackRate.add(20);
+//        this.skills = new ArrayList<>();
+//        this.skills.add("10만볼트");
+//        this.skills.add("스파크");
+//        this.skills.add("볼부비부비");
+//
+//        this.specialAttackRate = new ArrayList<>();
+//        this.specialAttackRate.add(90);
+//        this.specialAttackRate.add(65);
+//        this.specialAttackRate.add(20);
+
+        this.skills = new ArrayList<>(Arrays.asList("10만볼트", "스파크", "볼부비부비"));
+        this.specialAttackRate = new ArrayList<>(Arrays.asList(90, 65, 20));
     }
 
     @Override
@@ -31,12 +44,11 @@ public class Pikachu extends Pokemon{
         //super.attack();
         System.out.println(this.name + "이(가) 광역 전기 장판 공격을 시전합니다");
     }
-// 부모클래스의 정적 메서드 getPokemonCount가 override된게 아니라
+    // 부모클래스의 정적 메서드 getPokemonCount가 override된게 아니라
 // Pokemonster.Pikachu 클래스의 자체 정적 메서드가 선언된 것
 //    public static int getPokemonCount() {
 //        return 7;
 //    }
-
     public void type(){
         System.out.println(this.name +  " 전기 속성!");
     }
