@@ -1,6 +1,8 @@
 package Pokemonster;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 public class PokemonGame {
     public static void main(String[] args) {
 //        System.out.println((int)(Math.random() * 11) + 74);
