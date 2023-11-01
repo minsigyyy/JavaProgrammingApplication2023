@@ -1,12 +1,16 @@
 package Pokemonster;
+
 import fly.NoFly;
 import fly.Wings;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 public class PokemonGame {
     public static Pokemon enemy = null;
     public static void main(String[] args) {
         System.out.println("포켓몬 게임을 시작합니다...");
+
         try{
             Pokemon player = null;  // 추상클래스의 변수 선언은 가능 (upcasting 용)
             Scanner scanner = new Scanner(System.in);
@@ -14,7 +18,8 @@ public class PokemonGame {
                 System.out.print("포켓몬을 고르세요.\n1) 피카츄   2) 꼬부기   3) 리자몽 : ");
                 int pokemonPick = scanner.nextInt();
                 if(pokemonPick == 1){
-                    player = new Pikachu(new NoFly());
+                    //player = new Pikachu(new NoFly());
+                    player = new Pikachu(()-> System.out.println("로켓 추진기로 날아갑니다"));
                     break;
                 }else if(pokemonPick == 2){
                     player = new Squirtle(new NoFly());
@@ -26,7 +31,9 @@ public class PokemonGame {
                     System.out.println("정상적인 값이 아닙니다!");
                 }
             }
+
             produceEnemy();  // 적군 생성
+
             int menu, skillMenu;
             while(true){
                 System.out.print("\t1) 전투   2) 도망   3) 종료 : ");
