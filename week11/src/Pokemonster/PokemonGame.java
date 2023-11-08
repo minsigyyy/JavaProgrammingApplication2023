@@ -1,5 +1,4 @@
 package Pokemonster;
-
 import fly.NoFly;
 import fly.Wings;
 
@@ -11,7 +10,6 @@ public class PokemonGame {
     public static Pokemon enemy = null;
     public static void main(String[] args) {
         System.out.println("포켓몬 게임을 시작합니다...");
-
         try{
             Pokemon player = null;  // 추상클래스의 변수 선언은 가능 (upcasting 용)
             Scanner scanner = new Scanner(System.in);
@@ -32,12 +30,10 @@ public class PokemonGame {
                     System.out.println("정상적인 값이 아닙니다!");
                 }
             }
-
             produceEnemy();  // 적군 생성
-
             int menu, skillMenu;
             while(true){
-                System.out.print("\t1) 전투   2) 도망   3)물약(힐포션)   4) 종료 : ");
+                System.out.print("\t1) 전투   2) 도망   3) 물약(힐포션)   4) 종료 : ");
                 menu = scanner.nextInt();
                 if(menu == 1){
                     while(true){
@@ -59,14 +55,16 @@ public class PokemonGame {
                     player.performFly();
                     System.out.println("현재 지역을 탈출합니다~~~");
                     produceEnemy();
-                }else if(menu == 3) {
+                }else if(menu == 3){
+
+
                     System.out.println("힐링 포션을 마십니다. 30hp 증가합니다");
                     UnaryOperator<Integer> healPotion = hp -> hp + 30;
-                    int newHp= healPotion.apply(player.getHp());
+                    int newHp = healPotion.apply(player.getHp());
                     player.setHp(newHp);
-                    System.out.println(player.name + "의 체력은 " + player.getHp() + "입니다.!");
+                    System.out.println(player.name + "의 체력은 " + player.getHp() + "입니다!");
                 }else if(menu == 4){
-                        System.out.println("게임을 종료합니다.");
+                    System.out.println("게임을 종료합니다.");
                     break;
                 }else{
                     System.out.println("메뉴에서 선택하세요");
