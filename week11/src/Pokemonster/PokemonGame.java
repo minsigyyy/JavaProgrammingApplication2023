@@ -1,7 +1,6 @@
 package Pokemonster;
 import fly.NoFly;
 import fly.Wings;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.function.Function;
@@ -58,14 +57,15 @@ public class PokemonGame {
                     System.out.println("현재 지역을 탈출합니다~~~");
                     produceEnemy();
                 }else if(menu == 3){
-                    System.out.println("힐링 포션을 마십니다. 30hp 증가합니다");
-                    Supplier<Integer> healPortion = () -> {
-                        return 30;
-                    };
-//                    int newHp = healPotion.apply(player.getHp());
+//                    System.out.println("힐링 포션을 마십니다. 30hp 증가합니다");
 //                    Function<Integer, Integer> healPortion = hp -> hp + 30;
 //                    int newHp = healPortion.apply(player.getHp());
-                    player.setHp(healPortion.get() + (player.getHp()));
+//                    player.setHp(healPortion.apply(player.getHp()));
+                    Supplier<Integer> healPortion = () -> {
+                        System.out.println("힐링 포션을 마십니다. 30hp 증가합니다");
+                        return 30;
+                    };
+                    player.setHp(healPortion.get() + player.getHp());
                     System.out.println(player.name + "의 체력은 " + player.getHp() + "입니다!");
                 }else if(menu == 4){
                     System.out.println("게임을 종료합니다.");
